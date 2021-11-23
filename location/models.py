@@ -8,7 +8,6 @@ class Address(models.Model):
     city = models.CharField(max_length=50)
     address = models.CharField(max_length=2000)
 
-
     def __str__(self):
         if self.address:
             return self.address
