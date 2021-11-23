@@ -7,3 +7,12 @@ class Address(models.Model):
     state = models.CharField(max_length=50)
     city = models.CharField(max_length=50)
     address = models.CharField(max_length=2000)
+
+
+    def __str__(self):
+        if self.address:
+            return self.address
+        elif self.city:
+            return self.city
+        else:
+            return self.state
